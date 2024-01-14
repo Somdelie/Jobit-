@@ -6,26 +6,12 @@ body {
   margin: 0;
   padding: 0;
 }
-
-* For Webkit-based browsers */
-/* Change the color of the scrollbar */
-::-webkit-scrollbar {
-  width: 5px; /* width of the scrollbar */
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: #65758569;
-  border-radius: 10px; /* roundness of the scrollbar handle */
-}
-
 .glass {
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.41);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .banner {
@@ -36,7 +22,6 @@ body {
 }
 
 .css-3d-text {
-  /* font-size: 65px; */
   color: #ffffff;
   font-family: "Arial Black", Gadget, sans-serif;
   font-weight: bold;
