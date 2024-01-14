@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "clsx",
+    "flowbite",
+    "lucide",
+    "NEXTAUTH",
+    "signup",
+    "tailwindcss"
+  ]
+}
