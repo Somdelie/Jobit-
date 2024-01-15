@@ -15,7 +15,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}> <ThemeProvider
+      <body className={`${inter.className} dark:bg-gray-800 text-gray-700`}> <ThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
