@@ -11,11 +11,11 @@ const Layout = async ({ children }) => {
   return (
     <div>
 
-      <div className="">
-        <Navbar currentUser={currentUser} />
-        <main>{children}</main>
-        <Footer />
-      </div>
+
+      <Navbar currentUser={currentUser} />
+      <main>{children}</main>
+      <Footer />
+
     </div>
   )
 }

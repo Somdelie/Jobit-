@@ -7,8 +7,8 @@ export default function TextInputForm({
   errors,
   isRequired = true,
   type = "text",
-  className = "sm:col-span-2",
   defaultValue,
+  className,
 }) {
   return (
     <div className="mt-2">
@@ -24,7 +24,7 @@ export default function TextInputForm({
           defaultValue={defaultValue}
           autoComplete={name}
           placeholder={`Type ${label.toLowerCase()}`}
-          className="p-2 border"
+          className={`${className} p-2 border border-gray-300 dark:bg-input bg-transparent `}
         />
 
         {errors[`${name}`] && (

@@ -21,10 +21,10 @@ const MobileNav = ({ links, pathname }) => {
       <div
         className={
           !isOpen
-            ? " block items-center -translate-x-full dark:text-slate-100 text-slate-800 fixed left-0 top-0 h-screen w-[70%] bg-white dark:bg-dark-card overflow-y-auto transition-transform"
-            : "block items-center transition shadow bg-white shadow-dark-light dark:text-slate-100 text-slate-800 fixed left-0 top-0 h-screen w-[80%] dark:bg-dark-card overflow-y-auto"
+            ? " block items-center -translate-x-full dark:text-slate-100 text-gray-600 fixed left-0 top-0 h-screen w-[80%] bg-white dark:bg-darkCard overflow-y-auto transition-transform"
+            : "block items-center transition shadow bg-white  dark:text-gray-100 text-gray-600 fixed left-0 top-0 h-screen w-[80%] dark:bg-darkCard overflow-y-auto"
         }>
-        <div className="flex items-center p-4 justify-between bg-white dark:bg-dark-light border-b border-gray-200 dark:border-gray-600">
+        <div className="flex items-center p-4 justify-between bg-white dark:bg-darkCard border-b border-gray-200 dark:border-gray-600">
           <Link href="/" className="flex items-center">
             <Image width={24} height={24} src="/logo-mobile.png" alt="LOGO" />
             <h1 className="dark:text-white text-[26px] font-semibold">
@@ -32,7 +32,7 @@ const MobileNav = ({ links, pathname }) => {
             </h1>
           </Link>
           <button
-            className="bg-red-500 w-8 h-8 rounded-full p-2 flex text-white items-center justify-center"
+            className="bg-roseRed w-8 h-8 rounded-full p-2 flex text-white items-center justify-center"
             onClick={() => setIsOpen(false)}>
             X
           </button>
@@ -44,8 +44,8 @@ const MobileNav = ({ links, pathname }) => {
               href={link.link}
               className={
                 link.link === pathname
-                  ? "flex space-x-3 items-center border-lime-500 text-lime-500 transition "
-                  : "flex space-x-3 items-center hover:text-lime-500 transition dark:text-slate-100 text-slate-800"
+                  ? "flex space-x-3 items-center border-roseRed text-roseRed transition "
+                  : "flex space-x-3 items-center hover:text-roseRed transition dark:text-slate-100 text-gray-600"
               }
               onClick={() => setIsOpen(false)}>
               <span>{link.title}</span>

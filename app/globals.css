@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .glass {
   background: rgba(255, 255, 255, 0.41);
@@ -12,6 +13,10 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
+}
+
+nav.scrolled {
+  background-color: #cd4163;
 }
 
 .banner {
@@ -30,4 +35,16 @@ body {
     4px 4px 0 rgb(200, 200, 200), 5px 5px 0 rgb(189, 189, 189),
     6px 6px 5px rgba(0, 0, 0, 0.6), 6px 6px 1px rgba(0, 0, 0, 0.5),
     0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+
+.slick-slide > div:nth-child(1) {
+  margin-left: 0;
+}
+
+.slick-list {
+ 
 }

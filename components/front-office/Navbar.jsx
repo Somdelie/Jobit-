@@ -9,6 +9,7 @@ import { Dropdown } from "flowbite-react";
 import { Avatar } from "@mui/material";
 import { signOut } from "next-auth/react";
 import { ThemeSwitcher } from "../ui/ThemeSwitcher";
+import React, { useState, useEffect } from "react";
 
 const links = [
   {
@@ -43,10 +44,27 @@ const links = [
 ];
 
 const Navbar = ({ currentUser }) => {
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 0;
+    setScrolled(isScrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white glass flex items-center px-8 justify-between text-white transition text-[14px] dark:bg-gray-700 fixed w-full h-[60px] z-30 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <nav
+      className={`bg-white glass flex items-center px-8 justify-between text-white transition text-[14px] dark:bg-gray-700 fixed w-full h-[60px] z-30 top-0 start-0 border-b border-gray-200 dark:border-gray-600 ${
+        scrolled ? "scrolled" : ""
+      }`}
+    >
       <Link href="/" className="flex items-center">
         <Image width={24} height={24} src="/logo-mobile.png" alt="LOGO" />
         <h1 className="dark:text-white transition text-[22px] font-semibold">
@@ -62,8 +80,8 @@ const Navbar = ({ currentUser }) => {
             href={link.link}
             className={
               link.link === pathname
-                ? "flex items-center text-teal-600 transition "
-                : "flex items-center hover:text-teal-500 transition dark:text-gray-300 font-medium"
+                ? "flex items-center text-neonGreen transition "
+                : "flex items-center hover:text-neonGreen transition dark:text-gray-300 font-medium"
             }
           >
             <span>{link.title}</span>
@@ -77,7 +95,7 @@ const Navbar = ({ currentUser }) => {
             {/*-------------------------------- Post Job------------------------------------------------------- */}
             <Link
               href="/jobs/create"
-              className="flex items-center space-x-1 bg-teal-600 hover:opacity-70 transition text-gray-200 rounded px-4 py-1"
+              className="flex items-center space-x-1 bg-roseRed hover:opacity-70 transition text-gray-200 rounded px-4 py-1"
             >
               <Plus /> <span className="hidden md:block">post job</span>
             </Link>
