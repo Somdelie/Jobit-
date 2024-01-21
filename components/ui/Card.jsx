@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Card = ({ img }) => {
   return (
-    <div className="w-[100%] shadow dark:bg-gray-700 rounded-t-[10px] p-2 border dark:border-gray-700 overflow-hidden">
+    <div className="w-[100%] shadow  rounded-t-[10px] p-2 border dark:border-gray-700 overflow-hidden">
       <div>
         <Image
           width={500}

@@ -24,10 +24,9 @@ module.exports = {
         primary: '#0AD1BB',
         roseRed: '#CD4163',
         neonGreen: '#A1F7A1',
-        paragraph: '#E7E6E1',
         darkBg: '#111827',
         darkCard: '#1F2937',
-        paragraph: '#D1D5DB',
+        paragraph: '#9CA3AF',
         green: '#13ce66',
         input:'#374151',
         cognac: '#BE9685'

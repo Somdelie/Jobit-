@@ -77,47 +77,47 @@ export const Footer = () => {
       <footer>
         <div className="flex flex-wrap gap-2">
           <div className="flex-1 basis-[10rem]">
-            <h2 className="text-xl font-semibold">Home</h2>
+            <h2 className="text-xl font-semibold dark:text-gray-400">Home</h2>
             <ul>
               {leftLinks.map((link, index) => (
                 <li
-                  className="my-3 text-muted dark:text-gray-500 hover:text-secondaryGreen transition"
+                  className="my-2 text-muted dark:text-gray-500 transition"
                   key={index}
                 >
-                  <Link href={link}>{link.title}</Link>
+                  <Link href={link} className='transition hover:text-green'>{link.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="flex-1 basis-[10rem] text-sm">
-            <h2 className="text-xl font-semibold">Resources</h2>
+            <h2 className="text-xl font-semibold dark:text-gray-400">Resources</h2>
             <ul>
               {centerLinks.map((link, index) => (
                 <li
-                  className="my-3 text-muted dark:text-gray-500 hover:text-secondaryGreen transition"
+                  className="my-2 text-muted dark:text-gray-500 transition"
                   key={index}
                 >
-                  <Link href={link}>{link.title}</Link>
+                  <Link href={link} className='transition hover:text-green'>{link.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex-1 basis-[10rem] text-sm">
-            <h2 className="text-xl font-semibold">Main Links</h2>
+            <h2 className="text-xl font-semibold dark:text-gray-400">Main Links</h2>
             <ul>
               {rightLinks.map((link, index) => (
                 <li
-                  className="my-3 text-muted dark:text-gray-500 hover:text-secondaryGreen transition"
+                  className="my-2 text-muted dark:text-gray-500 transition"
                   key={index}
                 >
-                  <Link href={link}>{link.title}</Link>
+                  <Link href={link} className='transition hover:text-green'>{link.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div className="flex-1 basis-[10rem] text-sm text-center">
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-xl font-semibold dark:text-gray-400">
               Subscribe to our Newsletter
             </h2>
             <p className="text-muted text-13">
@@ -147,7 +147,7 @@ export const Footer = () => {
                     placeholder="name@somdelie.com"
                   />
                 </div>
-                <button className="bg-teal-600 text-gray-300 hover:opacity-70 px-4 py-2 flex-1">
+                <button className="bg-green text-gray-300 hover:opacity-70 px-4 py-2 flex-1">
                   Subscribe
                 </button>
               </form>
@@ -171,7 +171,7 @@ export const Footer = () => {
       </footer>
       <section className="attribution pt-2 border-t-2 flex items-center justify-center border-t-secondaryLightPurple">
         <p className="text-center  text-muted pb-2">
-          Created By <span className="text-teal-600">Somdelie Graphics</span> |
+          Created By <span className="text-redRose">Somdelie Graphics</span> |
           All Rights Reserved
         </p>
       </section>
